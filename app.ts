@@ -1,16 +1,16 @@
-import express, { Application } from "express";
-import cors from "cors";
-const app: Application = express();
+import express, { Application } from 'express'
+import cors from 'cors'
+const app: Application = express()
 
 //<------------------ All Router Import-------------->
-import UserRouter from "./apps/modules/users/user.routes";
+import UserRouter from './apps/modules/users/user.routes'
 
 // cors use
 app.use(cors())
 
 // parse data
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+app.use(express.json())
+app.use(express.urlencoded({ extended: true }))
 
 // User router
 app.use('/api/v1', UserRouter)
@@ -21,4 +21,4 @@ app.use('/api/v1', UserRouter)
 03. step- run system
 */
 
-export default app;
+export default app
