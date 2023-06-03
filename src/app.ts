@@ -1,9 +1,10 @@
 import express, { Application, Request, Response } from 'express'
 import cors from 'cors'
+
 const app: Application = express()
 
 //<------------------ All Router Import-------------->
-// import UserRouter from "./apps/modules/users/user.routes";
+import userRouter from './apps/modules/users/users.routes'
 
 // cors use
 app.use(cors())
@@ -12,8 +13,10 @@ app.use(cors())
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
+// <=============== Application All Routers ==================>
+
 // User router
-// app.use('/api/v1', UserRouter)
+app.use('/api/v1/users', userRouter)
 
 /* 
 01. step- src/ file serveces Or app create to connected database

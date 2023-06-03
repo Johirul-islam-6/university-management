@@ -12,9 +12,9 @@
     "lint-prettier": "npm run lint:check && npm run prettier:check",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-   "lint-staged": {
+  "lint-staged": {
     "src/**/*.ts": "npm run lint-prettier"
-   },
+  },
   "keywords": [],
   "author": "Rasel",
   "license": "ISC",
