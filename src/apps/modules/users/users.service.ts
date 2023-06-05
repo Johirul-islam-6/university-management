@@ -3,7 +3,7 @@ import { IUser } from './users.interface'
 import { User } from './users.model'
 import { generateUserId } from './users.utils'
 
-export const createdUser = async (user: IUser): Promise<IUser | null> => {
+const createdUser = async (user: IUser): Promise<IUser | null> => {
   const id = await generateUserId()
 
   user.id = id
@@ -19,4 +19,8 @@ export const createdUser = async (user: IUser): Promise<IUser | null> => {
     throw new Error('Faild to Create A user')
   }
   return createAuser
+}
+
+export const UserServices = {
+  createdUser,
 }
