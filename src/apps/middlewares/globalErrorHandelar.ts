@@ -1,8 +1,11 @@
+/* eslint-disable no-unused-expressions */
+
 import { IGenericErrorMassage } from './../../interfaces/GlobalError'
 import { ErrorRequestHandler } from 'express'
 import { handleValidationError } from '../../errors/handelValidationError'
 import config from '../../config'
 import { ApiError } from '../../errors/ApiError'
+import { errorLogger } from '../../shared/logger'
 
 export const globalErrorHandeler: ErrorRequestHandler = (
   error,
@@ -10,6 +13,12 @@ export const globalErrorHandeler: ErrorRequestHandler = (
   res,
   next
 ) => {
+  //when development or production project
+
+  config.evn === 'development'
+    ? console.log('Project Run Development Mode ~ ', error)
+    : errorLogger.error('Project Run Production Mode ~ ', error)
+
   let statusCode = 500
   let message = 'somting went wront !'
   let errorMessages: IGenericErrorMassage[] = []

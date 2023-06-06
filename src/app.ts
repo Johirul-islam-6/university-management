@@ -21,8 +21,10 @@ app.use(express.urlencoded({ extended: true }))
 // User router
 app.use('/api/v1/users', UserRoutes)
 
-// app.get('/', (req: Request, res: Response) => {
+// app.get('/', async (req: Request, res: Response) => {
 // //   throw new ApiError( 200,'hall dek', 'TWT')
+
+// //  console.log(x)
 // })
 
 //global Error Handelar
