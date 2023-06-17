@@ -1,10 +1,10 @@
-import { Request, Response } from 'express'
-import { createdUser } from './users.service'
+import { RequestHandler } from 'express'
+import { UserServices } from './users.service'
 
-const singelUserCreated = async (req: Request, res: Response) => {
+const singelUserCreated: RequestHandler = async (req, res, next) => {
   try {
     const { user } = req.body
-    const result = await createdUser(user)
+    const result = await UserServices.createdUser(user)
 
     res.status(200).json({
       success: true,
@@ -12,13 +12,10 @@ const singelUserCreated = async (req: Request, res: Response) => {
       massage: 'user created successfully',
     })
   } catch (error) {
-    res.status(400).json({
-      success: false,
-      massage: 'fail to create user',
-    })
+    next(error)
   }
 }
 
-export default {
+export const CreateUserController = {
   singelUserCreated,
 }

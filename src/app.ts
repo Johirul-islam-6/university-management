@@ -1,10 +1,13 @@
-import express, { Application, Request, Response } from 'express'
+import express, { Application } from 'express'
 import cors from 'cors'
 
 const app: Application = express()
 
 //<------------------ All Router Import-------------->
-import userRouter from './apps/modules/users/users.routes'
+
+import { globalErrorHandeler } from './apps/middlewares/globalErrorHandelar'
+import { UserRoutes } from './apps/modules/users/users.routes'
+// import { ApiError } from './errors/ApiError'
 
 // cors use
 app.use(cors())
@@ -16,16 +19,15 @@ app.use(express.urlencoded({ extended: true }))
 // <=============== Application All Routers ==================>
 
 // User router
-app.use('/api/v1/users', userRouter)
+app.use('/api/v1/users', UserRoutes)
 
-/* 
-01. step- src/ file serveces Or app create to connected database
-02. step- modules system folder Mantains modules-> users -> all file like model, router, controller, service
-03. step- run system
-*/
+// app.get('/', async (req: Request, res: Response) => {
+// //   throw new ApiError( 200,'hall dek', 'TWT')
 
-app.get('/', (req: Request, res: Response) => {
-  res.send('Hello World!')
-})
+// //  console.log(x)
+// })
+
+//global Error Handelar
+app.use(globalErrorHandeler)
 
 export default app
