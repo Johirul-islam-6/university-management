@@ -1,25 +1,25 @@
-import express, { Application } from 'express'
-import cors from 'cors'
+import express, { Application } from 'express';
+import cors from 'cors';
 
-const app: Application = express()
+const app: Application = express();
 
 //<------------------ All Router Import-------------->
 
-import { globalErrorHandeler } from './apps/middlewares/globalErrorHandelar'
-import { UserRoutes } from './apps/modules/users/users.routes'
+import { globalErrorHandeler } from './apps/middlewares/globalErrorHandelar';
+import { UserRoutes } from './apps/modules/users/users.routes';
 // import { ApiError } from './errors/ApiError'
 
 // cors use
-app.use(cors())
+app.use(cors());
 
 // parser
-app.use(express.json())
-app.use(express.urlencoded({ extended: true }))
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 // <=============== Application All Routers ==================>
 
 // User router
-app.use('/api/v1/users', UserRoutes)
+app.use('/api/v1/users', UserRoutes);
 
 // app.get('/', async (req: Request, res: Response) => {
 // //   throw new ApiError( 200,'hall dek', 'TWT')
@@ -28,6 +28,6 @@ app.use('/api/v1/users', UserRoutes)
 // })
 
 //global Error Handelar
-app.use(globalErrorHandeler)
+app.use(globalErrorHandeler);
 
-export default app
+export default app;

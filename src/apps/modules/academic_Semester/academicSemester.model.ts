@@ -1,9 +1,9 @@
-import { Schema } from 'mongoose'
+import { Schema } from 'mongoose';
 import {
   AcademicSemesterModel,
   IAcademicSemester,
-} from './academicSemester.interface'
-import { model } from 'mongoose'
+} from './academicSemester.interface';
+import { model } from 'mongoose';
 
 const Month = [
   'January',
@@ -18,7 +18,7 @@ const Month = [
   'October',
   'November',
   'December',
-]
+];
 
 const userSchema = new Schema<IAcademicSemester>(
   {
@@ -49,10 +49,10 @@ const userSchema = new Schema<IAcademicSemester>(
     },
   },
   { timestamps: true }
-)
+);
 
 // 3. Create a Model.
 export const AcademicSemester = model<IAcademicSemester, AcademicSemesterModel>(
   'User',
   userSchema
-)
+);
