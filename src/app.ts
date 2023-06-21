@@ -6,7 +6,6 @@ const app: Application = express();
 //<------------------ All Router Import-------------->
 
 import { globalErrorHandeler } from './apps/middlewares/globalErrorHandelar';
-import { UserRoutes } from './apps/modules/users/users.routes';
 // import { ApiError } from './errors/ApiError'
 
 // cors use
@@ -18,8 +17,10 @@ app.use(express.urlencoded({ extended: true }));
 
 // <=============== Application All Routers ==================>
 
-// User router
-app.use('/api/v1/users', UserRoutes);
+// // User router
+// app.use('/api/v1/users', UserRoutes);
+// // academic semester route
+// app.use('/api/v1/academic-semester', SemesterRoute)
 
 // app.get('/', async (req: Request, res: Response) => {
 // //   throw new ApiError( 200,'hall dek', 'TWT')

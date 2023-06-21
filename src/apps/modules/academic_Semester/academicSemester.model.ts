@@ -4,28 +4,20 @@ import {
   IAcademicSemester,
 } from './academicSemester.interface';
 import { model } from 'mongoose';
+import {
+  AcademicSemesterMonth,
+  AcademicSemesterTitele,
+  AcademicSemestercode,
+} from './academic.constant';
+import { ApiError } from '../../../errors/ApiError';
+import status from 'http-status';
 
-const Month = [
-  'January',
-  'February',
-  'March',
-  'April',
-  'May',
-  'June',
-  'July',
-  'August',
-  'September',
-  'October',
-  'November',
-  'December',
-];
-
-const userSchema = new Schema<IAcademicSemester>(
+const academicSemesterModel = new Schema<IAcademicSemester>(
   {
     title: {
       type: String,
       required: true,
-      enum: ['Autumn', 'Summer', 'Fall'],
+      enum: AcademicSemesterTitele,
     },
     year: {
       type: Number,
@@ -35,24 +27,41 @@ const userSchema = new Schema<IAcademicSemester>(
     code: {
       type: String,
       required: true,
-      enum: ['01', '02', '03'],
+      enum: AcademicSemestercode,
     },
     startMonth: {
       type: String,
       required: true,
-      enum: Month,
+      enum: AcademicSemesterMonth,
     },
     endMonth: {
       type: String,
       required: true,
-      enum: Month,
+      enum: AcademicSemesterMonth,
     },
   },
   { timestamps: true }
 );
 
+// this is same semester same year not anty database
+academicSemesterModel.pre('save', async function (next) {
+  const isExist = await AcademicSemester.findOne({
+    title: this.title,
+    year: this.year,
+  });
+
+  if (isExist) {
+    throw new ApiError(
+      status.CONFLICT,
+      'Academic Semester already Exist !',
+      ''
+    );
+  }
+  next();
+});
+
 // 3. Create a Model.
 export const AcademicSemester = model<IAcademicSemester, AcademicSemesterModel>(
-  'User',
-  userSchema
+  'AcademicSemester',
+  academicSemesterModel
 );
