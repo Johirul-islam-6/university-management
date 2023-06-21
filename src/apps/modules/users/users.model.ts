@@ -1,5 +1,5 @@
-import { Schema, model } from 'mongoose'
-import { IUser, UserModel } from './users.interface'
+import { Schema, model } from 'mongoose';
+import { IUser, UserModel } from './users.interface';
 
 // 2. Create a Schema corresponding to the document interface.
 const userSchema = new Schema<IUser>(
@@ -19,7 +19,7 @@ const userSchema = new Schema<IUser>(
     },
   },
   { timestamps: true }
-)
+);
 
 // 3. Create a Model.
-export const User = model<IUser, UserModel>('All-USERS', userSchema)
+export const User = model<IUser, UserModel>('All-USERS', userSchema);
