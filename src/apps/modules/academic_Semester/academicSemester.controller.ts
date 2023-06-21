@@ -6,19 +6,23 @@ import httpStatus from 'http-status';
 
 const CreateAcademicSemester = catchAsync(
   async (req: Request, res: Response, next: NextFunction) => {
-    const { ...academicSemester } = req.body;
-    const result = await AcademicSemesterServices.createAcademicSemester(
-      academicSemester
-    );
+    try {
+      const { ...academicSemester } = req.body;
+      // console.log("first", academicSemester)
+      const result = await AcademicSemesterServices.createAcademicSemester(
+        academicSemester
+      );
 
-    // create a senrespons function
-    sendResponse(res, {
-      statusCode: httpStatus.OK,
-      success: true,
-      data: result,
-      message: 'Academic Semester created successfully',
-    });
-    next();
+      // create a senrespons function
+      sendResponse(res, {
+        statusCode: httpStatus.OK,
+        success: true,
+        data: result,
+        message: 'Academic Semester created successfully',
+      });
+    } catch (error) {
+      next(error);
+    }
   }
 );
 

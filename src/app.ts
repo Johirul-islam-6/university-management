@@ -6,6 +6,7 @@ const app: Application = express();
 //<------------------ All Router Import-------------->
 
 import { globalErrorHandeler } from './apps/middlewares/globalErrorHandelar';
+import router from './apps/routes';
 // import { ApiError } from './errors/ApiError'
 
 // cors use
@@ -15,20 +16,24 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// <=============== Application All Routers ==================>
-
-// // User router
-// app.use('/api/v1/users', UserRoutes);
-// // academic semester route
-// app.use('/api/v1/academic-semester', SemesterRoute)
-
-// app.get('/', async (req: Request, res: Response) => {
-// //   throw new ApiError( 200,'hall dek', 'TWT')
-
-// //  console.log(x)
-// })
-
+// router
+app.use('/api/v1', router);
 //global Error Handelar
 app.use(globalErrorHandeler);
+
+//handle not found
+// app.use((req: Request, res: Response, next: NextFunction) => {
+//   res.status(httpStatus.NOT_FOUND).json({
+//     success: false,
+//     message: 'Not Found',
+//     errorMessages: [
+//       {
+//         path: req.originalUrl,
+//         message: 'API Not Found',
+//       },
+//     ],
+//   });
+//   next();
+// });
 
 export default app;
