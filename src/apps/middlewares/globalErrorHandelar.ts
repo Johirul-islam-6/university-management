@@ -1,11 +1,13 @@
 /* eslint-disable no-unused-expressions */
 
-import { IGenericErrorMassage } from './../../interfaces/GlobalError'
-import { ErrorRequestHandler } from 'express'
-import { handleValidationError } from '../../errors/handelValidationError'
-import config from '../../config'
-import { ApiError } from '../../errors/ApiError'
-import { errorLogger } from '../../shared/logger'
+import { IGenericErrorMassage } from './../../interfaces/GlobalError';
+import { ErrorRequestHandler } from 'express';
+import { handleValidationError } from '../../errors/handelValidationError';
+import config from '../../config';
+import { ApiError } from '../../errors/ApiError';
+import { errorLogger } from '../../shared/logger';
+import { ZodError } from 'zod';
+import handleZodError from '../../errors/handleZodError';
 
 export const globalErrorHandeler: ErrorRequestHandler = (
   error,
@@ -17,20 +19,25 @@ export const globalErrorHandeler: ErrorRequestHandler = (
 
   config.evn === 'development'
     ? console.log('Project Run Development Mode ~ ', error)
-    : errorLogger.error('Project Run Production Mode ~ ', error)
+    : errorLogger.error('Project Run Production Mode ~ ', error);
 
-  let statusCode = 500
-  let message = 'somting went wront !'
-  let errorMessages: IGenericErrorMassage[] = []
+  let statusCode = 500;
+  let message = 'somting went wront !';
+  let errorMessages: IGenericErrorMassage[] = [];
 
   if (error?.name === 'ValidatorError') {
-    const simpliFieldError = handleValidationError(error)
-    statusCode = simpliFieldError.statusCode
-    message = simpliFieldError.message
-    errorMessages = simpliFieldError.errorMessages
+    const simpliFieldError = handleValidationError(error);
+    statusCode = simpliFieldError.statusCode;
+    message = simpliFieldError.message;
+    errorMessages = simpliFieldError.errorMessages;
+  } else if (error instanceof ZodError) {
+    const simpliFieldError = handleZodError(error);
+    statusCode = simpliFieldError.statusCode;
+    message = simpliFieldError.message;
+    errorMessages = simpliFieldError.errorMessages;
   } else if (error instanceof ApiError) {
-    statusCode = error?.statusCode
-    message = error?.message
+    statusCode = error?.statusCode;
+    message = error?.message;
     errorMessages = error?.message
       ? [
           {
@@ -38,9 +45,9 @@ export const globalErrorHandeler: ErrorRequestHandler = (
             message: error?.message,
           },
         ]
-      : []
+      : [];
   } else if (error instanceof Error) {
-    message = error?.message
+    message = error?.message;
     errorMessages = error.message
       ? [
           {
@@ -48,7 +55,7 @@ export const globalErrorHandeler: ErrorRequestHandler = (
             message: error.message,
           },
         ]
-      : []
+      : [];
   }
 
   res.status(statusCode).json({
@@ -56,7 +63,7 @@ export const globalErrorHandeler: ErrorRequestHandler = (
     message,
     errorMessages,
     stack: config.evn !== 'production' ? error?.stack : undefined,
-  })
+  });
 
-  next()
-}
+  next();
+};
