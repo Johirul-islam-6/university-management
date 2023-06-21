@@ -1,17 +1,17 @@
-import { createLogger, format, transports } from 'winston'
-const { combine, timestamp, label, printf, prettyPrint } = format
-import DailyRotateFile from 'winston-daily-rotate-file'
-import path from 'path'
+import { createLogger, format, transports } from 'winston';
+const { combine, timestamp, label, printf, prettyPrint } = format;
+import DailyRotateFile from 'winston-daily-rotate-file';
+import path from 'path';
 
 //custom format
 const myFormat = printf(({ level, message, label, timestamp }) => {
-  const date = new Date(timestamp)
-  const hour = date.getHours()
-  const minuite = date.getMinutes()
-  const second = date.getSeconds()
+  const date = new Date(timestamp);
+  const hour = date.getHours();
+  const minuite = date.getMinutes();
+  const second = date.getSeconds();
 
-  return `${date.toDateString()} ${hour} : ${minuite} : ${second} [${label}] ${level}: ${message}`
-})
+  return `${date.toDateString()} ${hour} : ${minuite} : ${second} [${label}] ${level}: ${message}`;
+});
 
 // info massage
 export const logger = createLogger({
@@ -36,7 +36,7 @@ export const logger = createLogger({
       maxFiles: '1d',
     }),
   ],
-})
+});
 
 //error Logger
 export const errorLogger = createLogger({
@@ -61,6 +61,6 @@ export const errorLogger = createLogger({
       maxFiles: '1d',
     }),
   ],
-})
+});
 
 // logs/winston/success/ PHU.log, error.log
