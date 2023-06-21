@@ -1,6 +1,6 @@
 import { NextFunction, Request, Response } from 'express';
 import { UserServices } from './users.service';
-import { catchAsync } from '../../middlewares/catchAsync';
+import { catchAsync } from '../../../shared/catchAsync';
 import { sendResponse } from '../../../shared/sendResponse';
 import httpStatus from 'http-status';
 

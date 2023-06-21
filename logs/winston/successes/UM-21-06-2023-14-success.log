@@ -264,3 +264,17 @@
   label: 'UM',
   timestamp: '2023-06-21T08:40:50.887Z'
 }
+{
+  message: '📚 Database connected | All Ok',
+  level: 'info',
+  service: 'user-service',
+  label: 'UM',
+  timestamp: '2023-06-21T08:58:22.607Z'
+}
+{
+  message: 'Run Time listening on port 5000',
+  level: 'info',
+  service: 'user-service',
+  label: 'UM',
+  timestamp: '2023-06-21T08:58:22.617Z'
+}
