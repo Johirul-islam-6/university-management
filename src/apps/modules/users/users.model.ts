@@ -18,7 +18,12 @@ const userSchema = new Schema<IUser>(
       required: true,
     },
   },
-  { timestamps: true }
+  {
+    timestamps: true,
+    toJSON: {
+      virtuals: true,
+    },
+  }
 );
 
 // 3. Create a Model.

@@ -40,7 +40,12 @@ const academicSemesterModel = new Schema<IAcademicSemester>(
       enum: AcademicSemesterMonth,
     },
   },
-  { timestamps: true }
+  {
+    timestamps: true,
+    toJSON: {
+      virtuals: true,
+    },
+  }
 );
 
 // this is same semester same year not anty database
