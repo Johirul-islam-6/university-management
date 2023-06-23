@@ -19,11 +19,17 @@ export type IacademicSemesterTitele = 'Autumn' | 'Summer' | 'Fall';
 export type IacademicSemestercode = '01' | '02' | '03';
 
 export type IAcademicSemester = {
+  meta: { page: number; limit: number; total: number } | undefined;
+  data: IAcademicSemester[] | null | undefined;
   title: IacademicSemesterTitele;
-  year: number;
+  year: string;
   code: IacademicSemestercode;
   startMonth: IAcademicSemesterMonth;
   endMonth: IAcademicSemesterMonth;
+};
+
+export type IAcademicSemesterFilters = {
+  searchTerm?: string;
 };
 
 export type AcademicSemesterModel = Model<IAcademicSemester>;

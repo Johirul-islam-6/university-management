@@ -8,7 +8,7 @@ import { pagintionField } from '../../constant/pagination';
 import { IAcademicSemester } from './academicSemester.interface';
 
 const CreateAcademicSemester = catchAsync(
-  async (req: Request, res: Response, next: NextFunction) => {
+  async (req: Request, res: Response) => {
     const { ...academicSemester } = req.body;
     // console.log("first", academicSemester)
     const result = await AcademicSemesterServices.createAcademicSemester(
@@ -16,24 +16,32 @@ const CreateAcademicSemester = catchAsync(
     );
 
     // create a senrespons function
-    sendResponse(res, {
+    sendResponse<IAcademicSemester[]>(res, {
       statusCode: httpStatus.OK,
       success: true,
-      data: result,
+      data: result.data,
+      meta: result.meta,
       message: 'Academic Semester created successfully',
     });
 
-    next();
+    // next();
   }
 );
 
 // pagination limite academic semester
 const getAllSemester = catchAsync(
   async (req: Request, res: Response, next: NextFunction) => {
+    const filtering = queryPick(req.query, [
+      'searchTerm',
+      'title',
+      'code',
+      'year',
+    ]);
     const paginationOption = queryPick(req.query, pagintionField);
     // console.log(paginationOption)
 
     const result = await AcademicSemesterServices.getAllSemesterServe(
+      filtering,
       paginationOption
     );
 

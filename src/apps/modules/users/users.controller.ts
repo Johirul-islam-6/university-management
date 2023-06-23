@@ -19,6 +19,25 @@ const singelUserCreated = catchAsync(
   }
 );
 
+const getAllUsers = catchAsync(async (req: Request, res: Response) => {
+  // const filtering = queryPick(req.query, ['searchTerm']);
+  // const paginationOption = queryPick(req.query, pagintionField);
+
+  const result = await UserServices.getAllUserServec();
+
+  // const result = await User.find({});
+
+  //  sendResponse<IAcademicSemester[]>(res, {
+  //   statusCode: httpStatus.OK,
+  //   success: true,
+  //   // meta: result.meta,
+  //   data: result,
+  //   message: 'Get all user successfully',
+  // });
+  res.send(result);
+});
+
 export const CreateUserController = {
   singelUserCreated,
+  getAllUsers,
 };

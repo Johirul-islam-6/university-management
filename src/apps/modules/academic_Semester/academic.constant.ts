@@ -37,3 +37,5 @@ export const AcademicSemesterTitleCodeMapping: {
   Summer: '02',
   Fall: '03',
 };
+
+export const academicSemesterSearchableFields = ['year', 'code', 'title'];
