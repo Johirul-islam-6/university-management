@@ -113,7 +113,55 @@ const getAllSemesterServe = async (
   };
 };
 
+//singel a semester
+const singelSemester = async (
+  semesterId: string
+): Promise<IAcademicSemester | null> => {
+  const result = await AcademicSemester.findOne({ _id: semesterId });
+  return result;
+};
+
+// update semester
+const updateSemester = async (
+  semesterId: string,
+  payload: Partial<IAcademicSemester>
+): Promise<IAcademicSemester | null> => {
+  // const id = { _id : semesterId};
+  // checking semester final title and code
+  if (
+    payload.title &&
+    payload.code &&
+    AcademicSemesterTitleCodeMapping[payload.title] !== payload.code
+  ) {
+    throw new ApiError(
+      status.BAD_REQUEST,
+      'semester name not matching semester code',
+      ''
+    );
+  }
+  const result = await AcademicSemester.findOneAndUpdate(
+    { _id: semesterId },
+    payload,
+    { new: true }
+  );
+  return result;
+};
+
+//delet semester
+const DeleteSemester = async (
+  id: string
+): Promise<IAcademicSemester | null> => {
+  const semesterId = { _id: id };
+  const result = await AcademicSemester.findByIdAndDelete(semesterId, {
+    new: true,
+  });
+  return result;
+};
+
 export const AcademicSemesterServices = {
   createAcademicSemester,
   getAllSemesterServe,
+  singelSemester,
+  updateSemester,
+  DeleteSemester,
 };

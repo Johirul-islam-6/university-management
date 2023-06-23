@@ -24,6 +24,16 @@
             "date": 1687521653494,
             "name": "C:\\Next-Level\\mogoss\\university-management\\logs\\winston\\errors\\UM-23-06-2023-18-error.log",
             "hash": "2d21916d1e96f1628c59c604162e6a904bc4b9ebd59fd07102162a15ed2701b6"
+        },
+        {
+            "date": 1687525276111,
+            "name": "C:\\Next-Level\\mogoss\\university-management\\logs\\winston\\errors\\UM-23-06-2023-19-error.log",
+            "hash": "3476fe4b3daaf547fe2a53087879e92239d11f7ebf749dfd53f8dd6c40cca0e7"
+        },
+        {
+            "date": 1687528834296,
+            "name": "C:\\Next-Level\\mogoss\\university-management\\logs\\winston\\errors\\UM-23-06-2023-20-error.log",
+            "hash": "22bc9ca609a23bc24bfef806a31e8f94d5cadfa8b416cf5c24a203974db0b8e2"
         }
     ],
     "hashType": "sha256"

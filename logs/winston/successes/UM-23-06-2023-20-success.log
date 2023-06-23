@@ -3,460 +3,572 @@
   level: 'info',
   service: 'user-service',
   label: 'UM',
-  timestamp: '2023-06-23T12:00:54.185Z'
+  timestamp: '2023-06-23T14:00:36.410Z'
 }
 {
   message: 'Run Time listening on port 5000',
   level: 'info',
   service: 'user-service',
   label: 'UM',
-  timestamp: '2023-06-23T12:00:54.197Z'
+  timestamp: '2023-06-23T14:00:36.422Z'
 }
 {
   message: '📚 Database connected | All Ok',
   level: 'info',
   service: 'user-service',
   label: 'UM',
-  timestamp: '2023-06-23T12:03:54.274Z'
+  timestamp: '2023-06-23T14:01:51.625Z'
 }
 {
   message: 'Run Time listening on port 5000',
   level: 'info',
   service: 'user-service',
   label: 'UM',
-  timestamp: '2023-06-23T12:03:54.286Z'
+  timestamp: '2023-06-23T14:01:51.635Z'
 }
 {
   message: '📚 Database connected | All Ok',
   level: 'info',
   service: 'user-service',
   label: 'UM',
-  timestamp: '2023-06-23T12:05:03.243Z'
+  timestamp: '2023-06-23T14:02:16.842Z'
 }
 {
   message: 'Run Time listening on port 5000',
   level: 'info',
   service: 'user-service',
   label: 'UM',
-  timestamp: '2023-06-23T12:05:03.255Z'
+  timestamp: '2023-06-23T14:02:16.852Z'
 }
 {
   message: '📚 Database connected | All Ok',
   level: 'info',
   service: 'user-service',
   label: 'UM',
-  timestamp: '2023-06-23T12:11:18.877Z'
+  timestamp: '2023-06-23T14:04:27.092Z'
 }
 {
   message: 'Run Time listening on port 5000',
   level: 'info',
   service: 'user-service',
   label: 'UM',
-  timestamp: '2023-06-23T12:11:18.887Z'
+  timestamp: '2023-06-23T14:04:27.103Z'
 }
 {
   message: '📚 Database connected | All Ok',
   level: 'info',
   service: 'user-service',
   label: 'UM',
-  timestamp: '2023-06-23T12:13:25.205Z'
+  timestamp: '2023-06-23T14:04:43.427Z'
 }
 {
   message: 'Run Time listening on port 5000',
   level: 'info',
   service: 'user-service',
   label: 'UM',
-  timestamp: '2023-06-23T12:13:25.217Z'
+  timestamp: '2023-06-23T14:04:43.438Z'
 }
 {
   message: '📚 Database connected | All Ok',
   level: 'info',
   service: 'user-service',
   label: 'UM',
-  timestamp: '2023-06-23T12:15:07.862Z'
+  timestamp: '2023-06-23T14:06:03.390Z'
 }
 {
   message: 'Run Time listening on port 5000',
   level: 'info',
   service: 'user-service',
   label: 'UM',
-  timestamp: '2023-06-23T12:15:07.872Z'
+  timestamp: '2023-06-23T14:06:03.401Z'
 }
 {
   message: '📚 Database connected | All Ok',
   level: 'info',
   service: 'user-service',
   label: 'UM',
-  timestamp: '2023-06-23T12:16:59.898Z'
+  timestamp: '2023-06-23T14:11:05.641Z'
 }
 {
   message: 'Run Time listening on port 5000',
   level: 'info',
   service: 'user-service',
   label: 'UM',
-  timestamp: '2023-06-23T12:16:59.910Z'
+  timestamp: '2023-06-23T14:11:05.653Z'
 }
 {
   message: '📚 Database connected | All Ok',
   level: 'info',
   service: 'user-service',
   label: 'UM',
-  timestamp: '2023-06-23T12:25:17.302Z'
+  timestamp: '2023-06-23T14:11:44.941Z'
 }
 {
   message: 'Run Time listening on port 5000',
   level: 'info',
   service: 'user-service',
   label: 'UM',
-  timestamp: '2023-06-23T12:25:17.312Z'
+  timestamp: '2023-06-23T14:11:44.952Z'
 }
 {
   message: '📚 Database connected | All Ok',
   level: 'info',
   service: 'user-service',
   label: 'UM',
-  timestamp: '2023-06-23T12:27:33.432Z'
+  timestamp: '2023-06-23T14:12:17.272Z'
 }
 {
   message: 'Run Time listening on port 5000',
   level: 'info',
   service: 'user-service',
   label: 'UM',
-  timestamp: '2023-06-23T12:27:33.445Z'
+  timestamp: '2023-06-23T14:12:17.283Z'
 }
 {
   message: '📚 Database connected | All Ok',
   level: 'info',
   service: 'user-service',
   label: 'UM',
-  timestamp: '2023-06-23T12:28:07.467Z'
+  timestamp: '2023-06-23T14:12:38.865Z'
 }
 {
   message: 'Run Time listening on port 5000',
   level: 'info',
   service: 'user-service',
   label: 'UM',
-  timestamp: '2023-06-23T12:28:07.479Z'
+  timestamp: '2023-06-23T14:12:38.877Z'
 }
 {
   message: '📚 Database connected | All Ok',
   level: 'info',
   service: 'user-service',
   label: 'UM',
-  timestamp: '2023-06-23T12:29:49.649Z'
+  timestamp: '2023-06-23T14:14:24.586Z'
 }
 {
   message: 'Run Time listening on port 5000',
   level: 'info',
   service: 'user-service',
   label: 'UM',
-  timestamp: '2023-06-23T12:29:49.659Z'
+  timestamp: '2023-06-23T14:14:24.597Z'
 }
 {
   message: '📚 Database connected | All Ok',
   level: 'info',
   service: 'user-service',
   label: 'UM',
-  timestamp: '2023-06-23T12:31:04.975Z'
+  timestamp: '2023-06-23T14:14:57.720Z'
 }
 {
   message: 'Run Time listening on port 5000',
   level: 'info',
   service: 'user-service',
   label: 'UM',
-  timestamp: '2023-06-23T12:31:04.986Z'
+  timestamp: '2023-06-23T14:14:57.730Z'
 }
 {
   message: '📚 Database connected | All Ok',
   level: 'info',
   service: 'user-service',
   label: 'UM',
-  timestamp: '2023-06-23T12:31:46.403Z'
+  timestamp: '2023-06-23T14:15:39.724Z'
 }
 {
   message: 'Run Time listening on port 5000',
   level: 'info',
   service: 'user-service',
   label: 'UM',
-  timestamp: '2023-06-23T12:31:46.414Z'
+  timestamp: '2023-06-23T14:15:39.735Z'
 }
 {
   message: '📚 Database connected | All Ok',
   level: 'info',
   service: 'user-service',
   label: 'UM',
-  timestamp: '2023-06-23T12:33:05.931Z'
+  timestamp: '2023-06-23T14:16:39.169Z'
 }
 {
   message: 'Run Time listening on port 5000',
   level: 'info',
   service: 'user-service',
   label: 'UM',
-  timestamp: '2023-06-23T12:33:05.942Z'
+  timestamp: '2023-06-23T14:16:39.178Z'
 }
 {
   message: '📚 Database connected | All Ok',
   level: 'info',
   service: 'user-service',
   label: 'UM',
-  timestamp: '2023-06-23T12:34:07.537Z'
+  timestamp: '2023-06-23T14:16:56.753Z'
 }
 {
   message: 'Run Time listening on port 5000',
   level: 'info',
   service: 'user-service',
   label: 'UM',
-  timestamp: '2023-06-23T12:34:07.547Z'
+  timestamp: '2023-06-23T14:16:56.764Z'
 }
 {
   message: '📚 Database connected | All Ok',
   level: 'info',
   service: 'user-service',
   label: 'UM',
-  timestamp: '2023-06-23T12:34:33.823Z'
+  timestamp: '2023-06-23T14:17:01.239Z'
 }
 {
   message: 'Run Time listening on port 5000',
   level: 'info',
   service: 'user-service',
   label: 'UM',
-  timestamp: '2023-06-23T12:34:33.836Z'
+  timestamp: '2023-06-23T14:17:01.249Z'
 }
 {
   message: '📚 Database connected | All Ok',
   level: 'info',
   service: 'user-service',
   label: 'UM',
-  timestamp: '2023-06-23T12:34:40.595Z'
+  timestamp: '2023-06-23T14:17:04.451Z'
 }
 {
   message: 'Run Time listening on port 5000',
   level: 'info',
   service: 'user-service',
   label: 'UM',
-  timestamp: '2023-06-23T12:34:40.605Z'
+  timestamp: '2023-06-23T14:17:04.468Z'
 }
 {
   message: '📚 Database connected | All Ok',
   level: 'info',
   service: 'user-service',
   label: 'UM',
-  timestamp: '2023-06-23T12:34:54.070Z'
+  timestamp: '2023-06-23T14:17:18.845Z'
 }
 {
   message: 'Run Time listening on port 5000',
   level: 'info',
   service: 'user-service',
   label: 'UM',
-  timestamp: '2023-06-23T12:34:54.081Z'
+  timestamp: '2023-06-23T14:17:18.857Z'
 }
 {
   message: '📚 Database connected | All Ok',
   level: 'info',
   service: 'user-service',
   label: 'UM',
-  timestamp: '2023-06-23T12:35:16.716Z'
+  timestamp: '2023-06-23T14:17:25.084Z'
 }
 {
   message: 'Run Time listening on port 5000',
   level: 'info',
   service: 'user-service',
   label: 'UM',
-  timestamp: '2023-06-23T12:35:16.726Z'
+  timestamp: '2023-06-23T14:17:25.095Z'
 }
 {
   message: '📚 Database connected | All Ok',
   level: 'info',
   service: 'user-service',
   label: 'UM',
-  timestamp: '2023-06-23T12:35:45.939Z'
+  timestamp: '2023-06-23T14:18:05.641Z'
 }
 {
   message: 'Run Time listening on port 5000',
   level: 'info',
   service: 'user-service',
   label: 'UM',
-  timestamp: '2023-06-23T12:35:45.951Z'
+  timestamp: '2023-06-23T14:18:05.651Z'
 }
 {
   message: '📚 Database connected | All Ok',
   level: 'info',
   service: 'user-service',
   label: 'UM',
-  timestamp: '2023-06-23T12:36:02.243Z'
+  timestamp: '2023-06-23T14:19:13.690Z'
 }
 {
   message: 'Run Time listening on port 5000',
   level: 'info',
   service: 'user-service',
   label: 'UM',
-  timestamp: '2023-06-23T12:36:02.254Z'
+  timestamp: '2023-06-23T14:19:13.702Z'
 }
 {
   message: '📚 Database connected | All Ok',
   level: 'info',
   service: 'user-service',
   label: 'UM',
-  timestamp: '2023-06-23T12:37:47.416Z'
+  timestamp: '2023-06-23T14:20:29.849Z'
 }
 {
   message: 'Run Time listening on port 5000',
   level: 'info',
   service: 'user-service',
   label: 'UM',
-  timestamp: '2023-06-23T12:37:47.427Z'
+  timestamp: '2023-06-23T14:20:29.860Z'
 }
 {
   message: '📚 Database connected | All Ok',
   level: 'info',
   service: 'user-service',
   label: 'UM',
-  timestamp: '2023-06-23T12:38:18.125Z'
+  timestamp: '2023-06-23T14:20:38.260Z'
 }
 {
   message: 'Run Time listening on port 5000',
   level: 'info',
   service: 'user-service',
   label: 'UM',
-  timestamp: '2023-06-23T12:38:18.135Z'
+  timestamp: '2023-06-23T14:20:38.272Z'
 }
 {
   message: '📚 Database connected | All Ok',
   level: 'info',
   service: 'user-service',
   label: 'UM',
-  timestamp: '2023-06-23T12:38:42.023Z'
+  timestamp: '2023-06-23T14:21:14.213Z'
 }
 {
   message: 'Run Time listening on port 5000',
   level: 'info',
   service: 'user-service',
   label: 'UM',
-  timestamp: '2023-06-23T12:38:42.035Z'
+  timestamp: '2023-06-23T14:21:14.224Z'
 }
 {
   message: '📚 Database connected | All Ok',
   level: 'info',
   service: 'user-service',
   label: 'UM',
-  timestamp: '2023-06-23T12:45:03.130Z'
+  timestamp: '2023-06-23T14:21:23.853Z'
 }
 {
   message: 'Run Time listening on port 5000',
   level: 'info',
   service: 'user-service',
   label: 'UM',
-  timestamp: '2023-06-23T12:45:03.142Z'
+  timestamp: '2023-06-23T14:21:23.865Z'
 }
 {
   message: '📚 Database connected | All Ok',
   level: 'info',
   service: 'user-service',
   label: 'UM',
-  timestamp: '2023-06-23T12:50:38.514Z'
+  timestamp: '2023-06-23T14:23:07.207Z'
 }
 {
   message: 'Run Time listening on port 5000',
   level: 'info',
   service: 'user-service',
   label: 'UM',
-  timestamp: '2023-06-23T12:50:38.528Z'
+  timestamp: '2023-06-23T14:23:07.219Z'
 }
 {
   message: '📚 Database connected | All Ok',
   level: 'info',
   service: 'user-service',
   label: 'UM',
-  timestamp: '2023-06-23T12:51:19.173Z'
+  timestamp: '2023-06-23T14:24:50.824Z'
 }
 {
   message: 'Run Time listening on port 5000',
   level: 'info',
   service: 'user-service',
   label: 'UM',
-  timestamp: '2023-06-23T12:51:19.183Z'
+  timestamp: '2023-06-23T14:24:50.834Z'
 }
 {
   message: '📚 Database connected | All Ok',
   level: 'info',
   service: 'user-service',
   label: 'UM',
-  timestamp: '2023-06-23T12:52:08.218Z'
+  timestamp: '2023-06-23T14:26:49.765Z'
 }
 {
   message: 'Run Time listening on port 5000',
   level: 'info',
   service: 'user-service',
   label: 'UM',
-  timestamp: '2023-06-23T12:52:08.228Z'
+  timestamp: '2023-06-23T14:26:49.777Z'
 }
 {
   message: '📚 Database connected | All Ok',
   level: 'info',
   service: 'user-service',
   label: 'UM',
-  timestamp: '2023-06-23T12:52:41.601Z'
+  timestamp: '2023-06-23T14:29:14.086Z'
 }
 {
   message: 'Run Time listening on port 5000',
   level: 'info',
   service: 'user-service',
   label: 'UM',
-  timestamp: '2023-06-23T12:52:41.610Z'
+  timestamp: '2023-06-23T14:29:14.097Z'
 }
 {
   message: '📚 Database connected | All Ok',
   level: 'info',
   service: 'user-service',
   label: 'UM',
-  timestamp: '2023-06-23T12:55:20.409Z'
+  timestamp: '2023-06-23T14:30:31.095Z'
 }
 {
   message: 'Run Time listening on port 5000',
   level: 'info',
   service: 'user-service',
   label: 'UM',
-  timestamp: '2023-06-23T12:55:20.421Z'
+  timestamp: '2023-06-23T14:30:31.108Z'
 }
 {
   message: '📚 Database connected | All Ok',
   level: 'info',
   service: 'user-service',
   label: 'UM',
-  timestamp: '2023-06-23T12:55:40.944Z'
+  timestamp: '2023-06-23T14:31:44.391Z'
 }
 {
   message: 'Run Time listening on port 5000',
   level: 'info',
   service: 'user-service',
   label: 'UM',
-  timestamp: '2023-06-23T12:55:40.954Z'
+  timestamp: '2023-06-23T14:31:44.402Z'
 }
 {
   message: '📚 Database connected | All Ok',
   level: 'info',
   service: 'user-service',
   label: 'UM',
-  timestamp: '2023-06-23T12:56:02.302Z'
+  timestamp: '2023-06-23T14:34:45.019Z'
 }
 {
   message: 'Run Time listening on port 5000',
   level: 'info',
   service: 'user-service',
   label: 'UM',
-  timestamp: '2023-06-23T12:56:02.315Z'
+  timestamp: '2023-06-23T14:34:45.029Z'
 }
 {
   message: '📚 Database connected | All Ok',
   level: 'info',
   service: 'user-service',
   label: 'UM',
-  timestamp: '2023-06-23T12:56:32.467Z'
+  timestamp: '2023-06-23T14:36:44.727Z'
 }
 {
   message: 'Run Time listening on port 5000',
   level: 'info',
   service: 'user-service',
   label: 'UM',
-  timestamp: '2023-06-23T12:56:32.479Z'
+  timestamp: '2023-06-23T14:36:44.737Z'
+}
+{
+  message: '📚 Database connected | All Ok',
+  level: 'info',
+  service: 'user-service',
+  label: 'UM',
+  timestamp: '2023-06-23T14:37:11.819Z'
+}
+{
+  message: 'Run Time listening on port 5000',
+  level: 'info',
+  service: 'user-service',
+  label: 'UM',
+  timestamp: '2023-06-23T14:37:11.831Z'
+}
+{
+  message: '📚 Database connected | All Ok',
+  level: 'info',
+  service: 'user-service',
+  label: 'UM',
+  timestamp: '2023-06-23T14:38:40.197Z'
+}
+{
+  message: 'Run Time listening on port 5000',
+  level: 'info',
+  service: 'user-service',
+  label: 'UM',
+  timestamp: '2023-06-23T14:38:40.208Z'
+}
+{
+  message: '📚 Database connected | All Ok',
+  level: 'info',
+  service: 'user-service',
+  label: 'UM',
+  timestamp: '2023-06-23T14:41:10.886Z'
+}
+{
+  message: 'Run Time listening on port 5000',
+  level: 'info',
+  service: 'user-service',
+  label: 'UM',
+  timestamp: '2023-06-23T14:41:10.897Z'
+}
+{
+  message: '📚 Database connected | All Ok',
+  level: 'info',
+  service: 'user-service',
+  label: 'UM',
+  timestamp: '2023-06-23T14:41:49.158Z'
+}
+{
+  message: 'Run Time listening on port 5000',
+  level: 'info',
+  service: 'user-service',
+  label: 'UM',
+  timestamp: '2023-06-23T14:41:49.171Z'
+}
+{
+  message: '📚 Database connected | All Ok',
+  level: 'info',
+  service: 'user-service',
+  label: 'UM',
+  timestamp: '2023-06-23T14:42:42.208Z'
+}
+{
+  message: 'Run Time listening on port 5000',
+  level: 'info',
+  service: 'user-service',
+  label: 'UM',
+  timestamp: '2023-06-23T14:42:42.217Z'
+}
+{
+  message: '📚 Database connected | All Ok',
+  level: 'info',
+  service: 'user-service',
+  label: 'UM',
+  timestamp: '2023-06-23T14:43:03.446Z'
+}
+{
+  message: 'Run Time listening on port 5000',
+  level: 'info',
+  service: 'user-service',
+  label: 'UM',
+  timestamp: '2023-06-23T14:43:03.459Z'
+}
+{
+  message: '📚 Database connected | All Ok',
+  level: 'info',
+  service: 'user-service',
+  label: 'UM',
+  timestamp: '2023-06-23T14:43:18.623Z'
+}
+{
+  message: 'Run Time listening on port 5000',
+  level: 'info',
+  service: 'user-service',
+  label: 'UM',
+  timestamp: '2023-06-23T14:43:18.633Z'
+}
+{
+  message: '📚 Database connected | All Ok',
+  level: 'info',
+  service: 'user-service',
+  label: 'UM',
+  timestamp: '2023-06-23T14:43:22.882Z'
+}
+{
+  message: 'Run Time listening on port 5000',
+  level: 'info',
+  service: 'user-service',
+  label: 'UM',
+  timestamp: '2023-06-23T14:43:22.892Z'
 }

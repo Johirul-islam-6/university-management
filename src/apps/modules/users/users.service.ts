@@ -25,6 +25,7 @@ const getAllUserServec = async (): Promise<IUser[] | null> => {
   return result.length > 0 ? result : null;
 };
 
+// export file
 export const UserServices = {
   createdUser,
   getAllUserServec,

@@ -25,12 +25,9 @@ const getAllUsers = catchAsync(async (req: Request, res: Response) => {
 
   const result = await UserServices.getAllUserServec();
 
-  // const result = await User.find({});
-
-  //  sendResponse<IAcademicSemester[]>(res, {
+  //  sendResponse<IAcademicSemester>(res, {
   //   statusCode: httpStatus.OK,
   //   success: true,
-  //   // meta: result.meta,
   //   data: result,
   //   message: 'Get all user successfully',
   // });
