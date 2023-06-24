@@ -17,6 +17,18 @@ const userSchema = new Schema<IUser>(
       type: String,
       required: true,
     },
+    student: {
+      type: Schema.Types.ObjectId,
+      ref: 'Student',
+    },
+    faculty: {
+      type: Schema.Types.ObjectId,
+      ref: 'Faculty',
+    },
+    admin: {
+      type: Schema.Types.ObjectId,
+      ref: 'Admin',
+    },
   },
   {
     timestamps: true,
@@ -27,4 +39,4 @@ const userSchema = new Schema<IUser>(
 );
 
 // 3. Create a Model.
-export const User = model<IUser, UserModel>('All-USERS', userSchema);
+export const User = model<IUser, UserModel>('Users', userSchema);

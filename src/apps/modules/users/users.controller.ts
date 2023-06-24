@@ -6,8 +6,8 @@ import httpStatus from 'http-status';
 
 const singelUserCreated = catchAsync(
   async (req: Request, res: Response, next: NextFunction) => {
-    const { user } = req.body;
-    const result = await UserServices.createdUser(user);
+    const { ...userData } = req.body;
+    const result = await UserServices.createdUser(userData);
 
     sendResponse(res, {
       statusCode: httpStatus.OK,

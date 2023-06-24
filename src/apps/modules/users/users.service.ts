@@ -1,10 +1,15 @@
 import config from '../../../config/index';
 import { IUser } from './users.interface';
 import { User } from './users.model';
-import { generateUserId } from './users.utils';
+import { generateStudentId } from './users.utils';
 
 const createdUser = async (user: IUser): Promise<IUser | null> => {
-  const id = await generateUserId();
+  const semester = {
+    code: '01',
+    year: '2023',
+  };
+
+  const id = await generateStudentId(semester);
   user.id = id;
   // auto genarate password
   if (!user.password) {

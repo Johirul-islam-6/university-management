@@ -1,21 +1,55 @@
+import { IAcademicSemester } from '../academic_Semester/academicSemester.interface';
+
 import { User } from './users.model';
 
-// find database last User Id serial
-export const findLastUserId = async () => {
-  const lastUser = await User.findOne({}, { id: 1, _id: 0 })
+// find database last student Id serial
+export const findLastStudentId = async (): Promise<string | undefined> => {
+  const lastUser = await User.findOne({ role: 'student' }, { id: 1, _id: 0 })
     .sort({
       createdAt: -1,
     })
     .lean();
 
-  return lastUser?.id;
+  return lastUser?.id ? lastUser.id.substring(4) : undefined;
 };
 
-// create a user serial Id number generate
-export const generateUserId = async () => {
-  const currentId = (await findLastUserId()) || (0).toString().padStart(5, '0'); // 00000
+// create a student serial Id number generate
+export const generateStudentId = async (
+  AcademicSemester: IAcademicSemester
+): Promise<string> => {
+  const currentId =
+    (await findLastStudentId()) || (0).toString().padStart(5, '0'); // 00000
   //incementUserId
 
-  const incementuserId = (parseInt(currentId) + 1).toString().padStart(5, '0');
+  let incementuserId = (parseInt(currentId) + 1).toString().padStart(5, '0');
+
+  incementuserId = `${AcademicSemester.year.substring(2)}${
+    AcademicSemester.code
+  }${incementuserId}`;
+
+  return incementuserId;
+};
+
+// faculty utility
+export const findLastFacultyId = async (): Promise<string | undefined> => {
+  const lastFaculty = await User.findOne({ role: 'faculty' }, { id: 1, _id: 0 })
+    .sort({
+      createdAt: -1,
+    })
+    .lean();
+
+  return lastFaculty?.id ? lastFaculty.id.substring(2) : undefined;
+};
+
+// create a Faculty serial Id number generate
+export const generateFacultyId = async (): Promise<string> => {
+  const currentId =
+    (await findLastFacultyId()) || (0).toString().padStart(5, '0'); // 00000
+  //incementUserId
+
+  let incementuserId = (parseInt(currentId) + 1).toString().padStart(5, '0');
+
+  incementuserId = `F-${incementuserId}`;
+
   return incementuserId;
 };
