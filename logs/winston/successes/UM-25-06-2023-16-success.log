@@ -3,12 +3,12 @@
   level: 'info',
   service: 'user-service',
   label: 'UM',
-  timestamp: '2023-06-24T07:21:11.903Z'
+  timestamp: '2023-06-25T10:48:03.939Z'
 }
 {
   message: 'Run Time listening on port 5000',
   level: 'info',
   service: 'user-service',
   label: 'UM',
-  timestamp: '2023-06-24T07:21:11.914Z'
+  timestamp: '2023-06-25T10:48:03.959Z'
 }
