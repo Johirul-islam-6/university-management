@@ -4,19 +4,22 @@ type IapiResponse<T> = {
   statusCode: number;
   success: boolean;
   data?: T | null;
+  meta?: {
+    page: number;
+    limit: number;
+    total: number;
+  };
   message?: string | null;
 };
 
-export const sendResponse = <T>(
-  res: Response,
-  datas: IapiResponse<T>
-): void => {
+export const sendResponse = <T>(res: Response, data: IapiResponse<T>): void => {
   const responseData: IapiResponse<T> = {
-    statusCode: datas.statusCode,
-    success: datas.success,
-    data: datas.data || null,
-    message: datas.message || null,
+    statusCode: data.statusCode,
+    success: data.success,
+    meta: data.meta || null || undefined,
+    data: data.data || null || undefined,
+    message: data.message || null,
   };
 
-  res.status(datas.statusCode).json(responseData);
+  res.status(data.statusCode).json(responseData);
 };

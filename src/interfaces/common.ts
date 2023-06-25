@@ -5,3 +5,12 @@ export type IgenericErrorRespons = {
   message: string;
   errorMessages: IGenericErrorMassage[];
 };
+
+export type IGenaricRespons<T> = {
+  meta: {
+    page: number;
+    limit: number;
+    total: number;
+  };
+  data: T;
+};
