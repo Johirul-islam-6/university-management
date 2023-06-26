@@ -8,6 +8,11 @@ const createToken = (
   return jwt.sign(payload, secret, { expiresIn: expireTime });
 };
 
+const verifiedToken = (token: string, secret: Secret) => {
+  return jwt.verify(token, secret);
+};
+
 export const jwtHelpers = {
   createToken,
+  verifiedToken,
 };

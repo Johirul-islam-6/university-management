@@ -1,0 +1,42 @@
+{
+  message: '📚 Database connected | All Ok',
+  level: 'info',
+  service: 'user-service',
+  label: 'UM',
+  timestamp: '2023-06-26T13:01:12.356Z'
+}
+{
+  message: 'Run Time listening on port 5000',
+  level: 'info',
+  service: 'user-service',
+  label: 'UM',
+  timestamp: '2023-06-26T13:01:12.367Z'
+}
+{
+  message: '📚 Database connected | All Ok',
+  level: 'info',
+  service: 'user-service',
+  label: 'UM',
+  timestamp: '2023-06-26T13:03:03.899Z'
+}
+{
+  message: 'Run Time listening on port 5000',
+  level: 'info',
+  service: 'user-service',
+  label: 'UM',
+  timestamp: '2023-06-26T13:03:03.911Z'
+}
+{
+  message: '📚 Database connected | All Ok',
+  level: 'info',
+  service: 'user-service',
+  label: 'UM',
+  timestamp: '2023-06-26T13:03:25.128Z'
+}
+{
+  message: 'Run Time listening on port 5000',
+  level: 'info',
+  service: 'user-service',
+  label: 'UM',
+  timestamp: '2023-06-26T13:03:25.141Z'
+}
