@@ -34,6 +34,11 @@
             "date": 1687777542190,
             "name": "C:\\Next-Level\\mogoss\\university-management\\logs\\winston\\errors\\UM-26-06-2023-17-error.log",
             "hash": "5f8d0a6e1aba6090dda1647e009cebcefd68e720983508e45fbee930bc77bf96"
+        },
+        {
+            "date": 1687781113921,
+            "name": "C:\\Next-Level\\mogoss\\university-management\\logs\\winston\\errors\\UM-26-06-2023-18-error.log",
+            "hash": "381e708ce6896a9518e9515335ed7098376605ce9b0c0257f66afbc713c787d1"
         }
     ],
     "hashType": "sha256"

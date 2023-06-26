@@ -8,6 +8,7 @@ import { User } from './users.model';
 // create a student
 const createStudent: RequestHandler = catchAsync(
   async (req: Request, res: Response, next: NextFunction) => {
+    //  console.log(req.cookies, "cookie")
     const { student, ...userData } = req.body;
     const result = await UserServices.createdStuden(student, userData);
 

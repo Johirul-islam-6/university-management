@@ -22,7 +22,7 @@ const loingUser = async (payload: IloginUser): Promise<ILoginUserResponse> => {
   ) {
     throw new ApiError(httpStatus.UNAUTHORIZED, 'Password is Incorrect !', '');
   }
-
+  // ========================= jwt token start ============================
   // create access token
   const { id: userId, role, needPasswordChange } = isUserExist;
   const AccessToken = jwtHelpers.createToken(

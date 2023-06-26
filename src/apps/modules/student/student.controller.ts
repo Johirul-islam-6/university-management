@@ -1,4 +1,4 @@
-import { NextFunction, Request, Response } from 'express';
+import { NextFunction, Request, RequestHandler, Response } from 'express';
 import { catchAsync } from '../../../shared/catchAsync';
 import { sendResponse } from '../../../shared/sendResponse';
 import httpStatus from 'http-status';
@@ -30,7 +30,7 @@ import { StudentService } from './student.serveces';
 
 // pagination limite academic semester
 
-const getAllStudent = catchAsync(
+const getAllStudent: RequestHandler = catchAsync(
   async (req: Request, res: Response, next: NextFunction) => {
     const filtering = queryPick(req.query, [
       'searchTerm',
@@ -60,23 +60,26 @@ const getAllStudent = catchAsync(
 );
 
 //get singel semester
-const getSingelStudent = catchAsync(async (req: Request, res: Response) => {
-  const semester = req.params.id;
-  const result = await StudentService.getSingleStudent(semester);
+const getSingelStudent: RequestHandler = catchAsync(
+  async (req: Request, res: Response) => {
+    const semester = req.params.id;
+    const result = await StudentService.getSingleStudent(semester);
 
-  sendResponse<IStudent>(res, {
-    statusCode: httpStatus.OK,
-    success: true,
-    data: result,
-    message: 'A singel semester Show the display successfully',
-  });
-});
+    sendResponse<IStudent>(res, {
+      statusCode: httpStatus.OK,
+      success: true,
+      data: result,
+      message: 'A singel semester Show the display successfully',
+    });
+  }
+);
 
 // Update singel semester
 const updateStudent = catchAsync(async (req: Request, res: Response) => {
   const studentid = req.params.id;
   const updateData = req.body;
   const result = await StudentService.updateStudent(studentid, updateData);
+
   sendResponse<IStudent>(res, {
     statusCode: httpStatus.OK,
     success: true,
