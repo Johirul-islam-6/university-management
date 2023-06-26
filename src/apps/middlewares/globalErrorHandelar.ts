@@ -19,7 +19,8 @@ export const globalErrorHandeler: ErrorRequestHandler = (
   //when development or production project
 
   config.evn === 'development'
-    ? console.log('Project Run Development Mode ~ ', error)
+    ? // eslint-disable-next-line no-console
+      console.log('Project Run Development Mode ~ ', error)
     : errorLogger.error('Project Run Production Mode ~ ', error);
 
   let statusCode = 500;

@@ -16,19 +16,16 @@ import { IFaculty } from '../faculty/faculty.interface';
 import { Faculty } from '../faculty/faculty.model';
 import { IAdmin } from '../admin/admin.interface';
 import { Admin } from '../admin/admin.model';
-// import { generateStudentId } from './users.utils';
 
 const createdStuden = async (
   student: IStudent,
   user: IUser
 ): Promise<IUser | null> => {
-  // const id = await generateStudentId();
-  // user.id = id;
-
   // auto genarate password
   if (!user.password) {
     user.password = config.default_student_password as string;
   }
+
   // set role genarate
   user.role = 'student';
   const academecsemester = await AcademicSemester.findById(
@@ -160,6 +157,9 @@ const createAdmin = async (
   if (!user.password) {
     user.password = config.default_admin_pass as string;
   }
+
+  // user bcrypt # password security
+
   // set role
   user.role = 'admin';
 
