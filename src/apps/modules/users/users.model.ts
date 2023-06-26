@@ -45,21 +45,20 @@ const userSchema = new Schema<IUser, UserModel>(
   }
 );
 
-// checked user Id matching
-// userSchema.methods.isUserExist = async function(id: string): Promise<Partial<IUser> | null>{
-//  return await User.findOne({id}, {id :1, password:1, needPasswordChange:1})
-// }
-
+// user id statci method checking
 userSchema.statics.isUserExist = async function (
   id: string
-): Promise<Pick<IUser, 'id' | 'password' | 'needPasswordChange'> | null> {
+): Promise<Pick<
+  IUser,
+  'id' | 'password' | 'needPasswordChange' | 'role'
+> | null> {
   return await User.findOne(
     { id },
-    { id: 1, password: 1, needPasswordChange: 1 }
+    { id: 1, password: 1, role: 1, needPasswordChange: 1 }
   );
 };
 
-// instance methods
+// static methods is passwordMatch
 userSchema.statics.isPasswordMatch = async function (
   givenPassword: string,
   savePassword: string
@@ -67,7 +66,7 @@ userSchema.statics.isPasswordMatch = async function (
   return await bcrypt.compare(givenPassword, savePassword);
 };
 
-//checked user password  user bcrypt # password security
+//created user password to converted  bcrypt # password security
 
 userSchema.pre('save', async function (next) {
   const user = this;

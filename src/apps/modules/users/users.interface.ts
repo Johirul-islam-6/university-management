@@ -14,16 +14,12 @@ export type IUser = {
   admin?: Types.ObjectId | IAdmin;
 };
 
-// export interface IUserMethods {
-//   isUserExist(id : string):Promise<Partial<IUser> | null>,
-//   savePassword(givenPassword : string, currentPassword : string): Promise<boolean>
-// }
-
 // static interface
 export type UserModel = {
   isUserExist(
     id: string
-  ): Promise<Pick<IUser, 'id' | 'password' | 'needPasswordChange'>>;
+  ): Promise<Pick<IUser, 'id' | 'password' | 'needPasswordChange' | 'role'>>;
+
   isPasswordMatch(
     givenPassword: string,
     savePassword: string
