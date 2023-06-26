@@ -1,0 +1,20 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 1
+    },
+    "auditLog": "C:\\Next-Level\\mogoss\\university-management\\logs\\winston\\successes\\.451c109157cc348adf6395c60bf3f17931b397b3-audit.json",
+    "files": [
+        {
+            "date": 1687796882805,
+            "name": "C:\\Next-Level\\mogoss\\university-management\\logs\\winston\\successes\\UM-26-06-2023-22-success.log",
+            "hash": "64e26463497435e50689572c242231cd593fc2f4c7de9bc8975d360ce869a00c"
+        },
+        {
+            "date": 1687799932946,
+            "name": "C:\\Next-Level\\mogoss\\university-management\\logs\\winston\\successes\\UM-26-06-2023-23-success.log",
+            "hash": "5d9104ba731d4ba0a35e83daabe97f4d1e9dbee2752ec9a7cda02452d41e1dfb"
+        }
+    ],
+    "hashType": "sha256"
+}
