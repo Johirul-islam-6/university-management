@@ -7,6 +7,7 @@ import { AuthServices } from './auth.service';
 import { ILoginUserResponse } from './auth.interface';
 import config from '../../../config';
 
+//create a user
 const login = catchAsync(async (req: Request, res: Response) => {
   const { ...loginData } = req.body;
   const result = await AuthServices.loingUser(loginData);
@@ -31,6 +32,7 @@ const login = catchAsync(async (req: Request, res: Response) => {
   });
 });
 
+// refresh token service
 const refreshToken = catchAsync(async (req: Request, res: Response) => {
   const { refreshToken } = req.cookies;
   const result = await AuthServices.refreshToken(refreshToken);
@@ -54,7 +56,23 @@ const refreshToken = catchAsync(async (req: Request, res: Response) => {
   });
 });
 
+// change password
+const changePassword = catchAsync(async (req: Request, res: Response) => {
+  const user = req.user;
+
+  const { ...passwordData } = req.body;
+  await AuthServices.changePassword(user, passwordData);
+
+  sendResponse<ILoginUserResponse>(res, {
+    statusCode: httpStatus.OK,
+    success: true,
+    message: 'user update password successfuly',
+    // data: result,
+  });
+});
+
 export const AuthController = {
   login,
   refreshToken,
+  changePassword,
 };

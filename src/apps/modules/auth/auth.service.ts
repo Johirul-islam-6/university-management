@@ -2,15 +2,14 @@ import httpStatus from 'http-status';
 import { ApiError } from '../../../errors/ApiError';
 import { User } from '../users/users.model';
 import {
+  IChangePassword,
   ILoginUserResponse,
   IRefreshToken,
   IloginUser,
 } from './auth.interface';
-import jwt, { Secret } from 'jsonwebtoken';
+import jwt, { JwtPayload, Secret } from 'jsonwebtoken';
 import config from '../../../config';
 import { jwtHelpers } from '../../../helpers/jwtHelpers';
-
-// import bcrypt from 'bcrypt';
 
 const loingUser = async (payload: IloginUser): Promise<ILoginUserResponse> => {
   const { id, password } = payload;
@@ -84,7 +83,55 @@ const refreshToken = async (token: string): Promise<IRefreshToken> => {
   };
 };
 
+// change password
+
+const changePassword = async (
+  user: JwtPayload | null,
+  payload: IChangePassword
+): Promise<void> => {
+  const { oldPassword, newPassword } = payload;
+  // const isUserExist = await User.isUserExist(user?.userId)
+  // alternative way
+  const isUserExist = await User.findOne({ id: user?.userId }).select(
+    '+password'
+  );
+
+  if (!isUserExist) {
+    throw new ApiError(httpStatus.NOT_FOUND, 'user does not exist', '');
+  }
+  //checking old password
+  if (
+    isUserExist.password &&
+    !(await User?.isPasswordMatch(oldPassword, isUserExist.password))
+  ) {
+    throw new ApiError(
+      httpStatus.UNAUTHORIZED,
+      'Old Password is Incorrect !',
+      ''
+    );
+  }
+
+  //// alternative way
+
+  // // bcrypt hashing password
+  // const newHashingPassword = await bcrypt.hash(newPassword,Number(config.bcrypt_numbers as string))
+
+  // // update password
+  // const updateData = {
+  //   password : newHashingPassword,
+  //   needPasswordChange : false,
+  //   passwordChangeAT : new Date()
+  // }
+  //  await User.findOneAndUpdate({id : user?.userId}, updateData)
+
+  // updatein save method
+  isUserExist.needPasswordChange = false;
+  isUserExist.password = newPassword;
+  isUserExist.save();
+};
+
 export const AuthServices = {
   loingUser,
   refreshToken,
+  changePassword,
 };

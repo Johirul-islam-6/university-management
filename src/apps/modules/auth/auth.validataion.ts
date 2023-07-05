@@ -21,9 +21,23 @@ const refreshtokenZodSchema = z.object({
         required_error: 'Refresh Token is Requierd',
       })
       .optional(),
-    password: z
+    // password: z
+    //   .string({
+    //     required_error: 'Password is Required',
+    //   })
+    //   .optional(),
+  }),
+});
+const changePasswordZodSchema = z.object({
+  body: z.object({
+    oldPassword: z
       .string({
-        required_error: 'Password is Required',
+        required_error: 'Old Password is Required',
+      })
+      .optional(),
+    newPassword: z
+      .string({
+        required_error: 'write New Password is Required',
       })
       .optional(),
   }),
@@ -32,4 +46,5 @@ const refreshtokenZodSchema = z.object({
 export const AuthValidation = {
   authZodSchema,
   refreshtokenZodSchema,
+  changePasswordZodSchema,
 };
