@@ -5,11 +5,11 @@ import { validateRequest } from '../../middlewares/validateRequest';
 
 const router = express.Router();
 
-router.post(
-  '/create-semester',
-  validateRequest(AcademicSemesterValidation.AcademicSemesterZodSchema),
-  AcademicSemesterController.CreateAcademicSemester
-);
+// router.post(
+//   '/create-semester',
+//   validateRequest(AcademicSemesterValidation.AcademicSemesterZodSchema),
+//   AcademicSemesterController.CreateAcademicSemester
+// );
 router.patch(
   '/:id',
   validateRequest(AcademicSemesterValidation.UpdateAcademicSemesterSchema),

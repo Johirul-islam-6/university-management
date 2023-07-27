@@ -1,20 +1,20 @@
 {
-    "keep": {
-        "days": true,
-        "amount": 1
+  "keep": {
+    "days": true,
+    "amount": 1
+  },
+  "auditLog": "C:\\Next-Level\\mogoss\\university-management\\logs\\winston\\successes\\.451c109157cc348adf6395c60bf3f17931b397b3-audit.json",
+  "files": [
+    {
+      "date": 1688490017543,
+      "name": "C:\\Next-Level\\mogoss\\university-management\\logs\\winston\\successes\\UM-04-07-2023-23-success.log",
+      "hash": "2870b0f4182c1b1b626a051430f925affd6b2ae32f773bf758e6e4966e1286e6"
     },
-    "auditLog": "C:\\Next-Level\\mogoss\\university-management\\logs\\winston\\successes\\.451c109157cc348adf6395c60bf3f17931b397b3-audit.json",
-    "files": [
-        {
-            "date": 1688490017543,
-            "name": "C:\\Next-Level\\mogoss\\university-management\\logs\\winston\\successes\\UM-04-07-2023-23-success.log",
-            "hash": "2870b0f4182c1b1b626a051430f925affd6b2ae32f773bf758e6e4966e1286e6"
-        },
-        {
-            "date": 1688565673743,
-            "name": "C:\\Next-Level\\mogoss\\university-management\\logs\\winston\\successes\\UM-05-07-2023-20-success.log",
-            "hash": "9c6f4b40f9757b7892f94764dcbff4ab49a6bc9bda3e1510d1c2914d99a527f9"
-        }
-    ],
-    "hashType": "sha256"
+    {
+      "date": 1688565673743,
+      "name": "C:\\Next-Level\\mogoss\\university-management\\logs\\winston\\successes\\UM-05-07-2023-20-success.log",
+      "hash": "9c6f4b40f9757b7892f94764dcbff4ab49a6bc9bda3e1510d1c2914d99a527f9"
+    }
+  ],
+  "hashType": "sha256"
 }
