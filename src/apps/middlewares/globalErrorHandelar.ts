@@ -5,7 +5,6 @@ import { ErrorRequestHandler } from 'express';
 import { handleValidationError } from '../../errors/handelValidationError';
 import config from '../../config';
 import { ApiError } from '../../errors/ApiError';
-import { errorLogger } from '../../shared/logger';
 import { ZodError } from 'zod';
 import handleZodError from '../../errors/handleZodError';
 import { handleCastError } from '../../errors/handleCastError';
@@ -21,7 +20,7 @@ export const globalErrorHandeler: ErrorRequestHandler = (
   config.evn === 'development'
     ? // eslint-disable-next-line no-console
       console.log('Project Run Development Mode ~ ', error)
-    : errorLogger.error('Project Run Production Mode ~ ', error);
+    : console.log('Project Run Production Mode ~ ', error);
 
   let statusCode = 500;
   let message = 'somting went wront !';
