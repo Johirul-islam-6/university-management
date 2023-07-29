@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 // import { Schema, model } from 'mongoose';
 // import { AdminModel, IAdmin } from './admin.interface';
 // const AdminSchema = new Schema<IAdmin, AdminModel>(
